@@ -31,6 +31,17 @@ GameObject.prototype.destroy = function(){
   * should inherit destroy() from GameObject's prototype
 */
 
+function CharacterStats(stats){
+  GameObject.call(this,stats);
+  this.healthPoints = stats.healthPoints;
+}
+CharacterStats.prototype = Object.create(GameObject.prototype);
+CharacterStats.prototype.takeDamage = function(){
+  return `${this.name} took damage.` 
+};
+
+
+
 /*
   === Humanoid (Having an appearance or character resembling that of a human.) ===
   * team
