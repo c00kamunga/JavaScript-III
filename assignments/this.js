@@ -13,11 +13,11 @@
 
 // code example for Window Binding
 
-
-
-
-
-
+function hello(greeting){
+console.log(this);
+return `I am saying ${greeting}.`
+}
+console.log(hello('hello'));
 
 
 
