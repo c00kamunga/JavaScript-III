@@ -13,13 +13,44 @@
 
 // code example for Window Binding
 
+
+
+
+
+
+
+
+
+
 // Principle 2
 
 // code example for Implicit Binding
 
+const bar = {
+    name: "bar",
+    likes: "video games",
+    food: "a lot of food",
+    does: function(){
+        return `Hi my name is ${this.name}, I like to play ${this.likes} and eat ${this.food}.`
+    }
+}
+console.log(bar.does())
+
+
+
+
 // Principle 3
 
 // code example for New Binding
+
+
+
+
+
+
+
+
+
 
 // Principle 4
 
