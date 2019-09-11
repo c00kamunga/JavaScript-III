@@ -44,6 +44,21 @@ console.log(bar.does())
 
 // code example for New Binding
 
+function Being(tasty){
+    this.tasty = tasty;
+    this.eat = function(){
+        console.log(`This human loves to eat ${this.tasty}.`);
+    }
+}
+const human = new Being("burgers");
+human.eat();
+
+
+
+
+
+
+
 
 
 
