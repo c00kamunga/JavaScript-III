@@ -14,6 +14,7 @@
 // code example for Window Binding
 
 function hello(greeting){
+"use strict";
 console.log(this);
 return `I am saying ${greeting}.`
 }
@@ -49,9 +50,23 @@ console.log(bar.does())
 
 
 
-
-
-
 // Principle 4
 
 // code example for Explicit Binding
+
+const joseph = {
+    name: "joseph"
+}
+
+const david = {
+    name: "david"
+}
+
+const skills = ["burgers", "tacos", "pizza"];
+function introduce(food1, food2, food3){
+    "use strict";
+    return `Hi my name is ${this.name} and I like ${food1}, ${food2}, and ${food3}.`;
+}
+
+console.log(introduce.apply(joseph,skills));
+console.log(introduce.apply(david,skills));
